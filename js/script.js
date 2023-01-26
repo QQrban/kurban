@@ -41,6 +41,5 @@ function randomColor() {
     return randomFunction();
 }
 
-
 }
 
