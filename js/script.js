@@ -15,8 +15,11 @@ function randomColorHex(){
 }
 
 function randomColorRGB(){
-    let randomNumber = Math.floor(Math.random() * 255);
-    let randomColor = `Rgba(${randomNumber},${randomNumber},${randomNumber})`
+    let randomNumber = function() {
+        let num = Math.floor(Math.random() * 255);
+        return num;
+    }
+    let randomColor = `Rgba(${randomNumber()},${randomNumber()},${randomNumber()})`
     color.innerText = randomColor;
     body.style.backgroundColor = randomColor;
     return;
@@ -42,4 +45,5 @@ function randomColor() {
 }
 
 }
+
 
