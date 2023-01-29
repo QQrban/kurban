@@ -1,0 +1,250 @@
+@import 'config';
+@import url(https://fonts.googleapis.com/css?family=Inter:300,regular,500,600,700,800,900);
+
+
+
+$color-white : #F2F2F2;
+$color-black : rgba(0, 0, 0, 0.692);
+$color-orange: #EB5757;
+
+body {
+    height: 100%;
+    color: $color-white;
+    font-family: 'Inter';
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin font($f-size, $f-weight, $l-height) {
+    font-size: $f-size;
+    font-weight: $f-weight;
+    line-height: $l-height;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+%logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    a {
+        @include font(40px, 700, 36px);
+        letter-spacing: 3px;
+        font-variant: small-caps;
+    }
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.header {
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 100%;
+    z-index: 500;
+    &-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &-logo {
+        @extend %logo;
+    }
+    &-links {
+        display: flex;
+        a {
+            @include font(27px, 700, 30px);
+            font-variant: small-caps;
+            &:hover {
+                text-shadow: 0px 4px 4px rgba(255, 255, 255, 0.25);
+            }
+            &:not(:last-child) {
+                margin-right: 48px;
+            }
+            
+        }
+    }
+}
+
+main {
+    flex: 1 1 auto;
+    padding: 200px 0 0 0;
+    background-image: url(../img/background/Kopli1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(56, 55, 145, 0.452);
+    background-blend-mode: multiply;
+    background-attachment: fixed;
+}
+
+.intro {
+    &-text {
+        max-width: 550px;
+        h1 {
+            @include font(65px, 700, 79px);
+            text-transform: capitalize;
+        }
+        p {
+            margin-top: 30px;
+            @include font(30px, 600, 46px);
+        }
+        button {
+            border: none;
+            margin-top: 40px;
+            background: $color-orange;
+            border-radius: 34px;
+            padding: 15px 30px;
+            @include font(30px, 700, 36px);
+            color: white;
+            cursor: pointer;
+            &:hover {
+                background: darken($color-orange, 3%);
+            }
+        }
+    }
+}
+
+.offers {
+    margin-top: 19px;
+    padding-bottom: 80px;
+    border-bottom: 10px solid black;
+    &-container{
+        display: flex;
+        justify-content: flex-end;
+    }
+   &-items {
+        display: flex;
+        gap: 50px;
+   }
+   &-item {
+    text-align: left;
+    width: 253px;
+    background: rgba(205, 174, 186, 0.7);
+    border-radius: 40px 0;
+    padding: 20px 20px;
+
+    h3 {
+        @include font(30px, 700, 36px);
+        text-transform: capitalize;
+        color:rgba(0, 0, 0);
+    }
+    p {
+        margin-top: 15px;
+        @include font(20px, 600, 29px);
+        color: rgba(0, 0, 0);
+    }
+   }
+}
+
+.gallery {
+    padding: 80px 0;
+    background-image: url(../img/background/Kopli2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(108, 186, 192, 0.329);
+    background-blend-mode: multiply;
+    background-attachment: fixed;
+
+    h2 {
+        text-align: center;
+        @include font(65px, 700, 29px);
+        letter-spacing: 2px;
+        font-variant: small-caps;
+    }
+    &-items {
+        margin-top: 60px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+    &-item {
+        border: 8px solid rgba(255, 255, 255, 0.712);
+        p {
+            text-align: center;
+            @include font(24px, 600, 29px);
+            background-color: $color-black;
+            font-variant: small-caps;
+        }
+    }
+}
+
+.footer {
+    padding-top: 10px;
+    background-color: rgba(0, 0, 0, 0.76);
+    &-logo {
+        @extend %logo;
+        justify-content: center;
+        scale: 0.8;
+    }
+    &-links {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        div {
+            display: flex;
+            gap: 15px;
+        }
+    }
+    &-form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .your-email {
+            width: 150px;
+            height: 30px;
+            border-radius: 5px;
+            border: none;
+            background-color: rgb(197, 197, 197);
+            padding-left: 10px;
+            font-family: 'Inter';
+            font-size: 16px;
+            &:focus {
+                outline: none;
+                box-shadow: 0px 0px 4px $color-white;
+            }
+
+        }
+        .form-send {
+            display: flex;
+            gap: 20px;
+            .your-message {
+                width: 400px;
+                height: 60px;
+                border-radius: 5px;
+                resize: none;
+                background-color: rgb(197, 197, 197);
+                padding-left: 10px;
+                font-family: 'Inter';
+                font-size: 16px;
+                &:focus {
+                    outline: none;
+                    box-shadow: 0px 0px 4px $color-white;
+                }
+            }
+            .btn {
+                padding: 5px 10px;
+                align-self: flex-end;
+                border-radius: 5px;
+                background-color: $color-orange;
+                border: none;
+                @include font(17px, 700, 23px);
+                color: $color-white;
+                cursor: pointer;
+                &:hover {
+                    background: darken($color-orange, 3%);
+                }
+            }
+        }
+
+    }
+}
+
+
+
+@import 'media';

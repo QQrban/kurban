@@ -1,0 +1,123 @@
+@media (max-width: 901px) {
+    .header {
+        &-container {
+            flex-direction: column;
+        }
+        &-links {
+            margin-top: 20px;
+        }
+    }
+    .intro {
+        &-text {
+            margin: 0 auto;
+            text-align: center;
+        }
+    }
+    .offers {
+        &-container {
+            margin-top: 50px;
+            justify-content: center;
+        }
+        &-items {
+            flex-direction: column;
+            gap: 20px;
+        }
+        &-item {
+            width: 400px;
+            height: 150px;
+        }
+    }
+    .gallery {
+        &-items {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 5px;
+        }
+    }
+    .footer {
+        &-form {
+            margin-top: 20px;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .header {
+        &-links {
+            a {
+                &:not(:last-child) {
+                    margin-right: 30px;
+                }
+            }
+        }
+    }
+    .gallery {
+        &-items {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .footer {
+        &-links {
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+    }
+}
+
+@media (max-width: 414px) {
+    .offers {
+        &-container {
+            margin-top: 50px;
+            justify-content: center;
+        }
+        &-items {
+            flex-direction: column;
+            gap: 20px;
+        }
+        &-item {
+            width: 320px;
+            padding: 10px 10px;
+            h3 {
+                font-size: 26px; 
+            }
+            p {
+                font-size: 19px;
+            }
+        }
+    }
+    .footer {
+        .form-send {
+            .your-message{
+                width: 100%;
+            }
+            flex-direction: column;
+        }
+    }
+}
+
+@media (max-width: 367px) {
+    .header {
+        &-container {
+            flex-direction: column;
+        }
+        &-links {
+            margin-top: 5px;
+            flex-direction: column;
+            gap: 5px;
+            &:not(:last-child) {
+                margin-right: 0px;
+            }
+        }
+    }
+    .intro {
+        &-text {
+            margin: 20px auto;
+        }
+    }
+    .offers {
+        &-item {
+            width: 300px;
+        }
+    }
+}

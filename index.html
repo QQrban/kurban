@@ -5,15 +5,107 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-   
-    <section class="body-color">
-        <div class="screen">Background Color : <span id="color">#000000</span></div>
-        <button>click me</button>
+    <header class="header">
+        <div class="header-container container">
+            <div class="header-logo">
+                <img src="img/icons/logo.svg" alt="logo">
+                <a href="#">koplitravel</a>
+             </div>
+             <nav class="header-links">
+                 <a href="">home</a>
+                 <a href="#gallery">gallery</a>
+                 <a href="#contact">contact us</a>
+             </nav>
+        </div>
+    </header>
+    <main>
+        <section class="intro">
+            <div class="intro-container container">
+                <div class="intro-text">
+                    <h1>It's a big district out there,go explore</h1>
+                    <p>The most picturesque and jaw-dropping landscape northern subdistrict of Tallinn</p>
+                    <button>Book Now</button>
+                </div>
+            </div>
+        </section>
+        <section class="offers">
+            <div class="offers-container container">
+                <div class="offers-items">
+                    <div class="offers-item">
+                        <h3>Inspirational offer</h3>
+                        <p>Handpicked travel offers</p>
+                    </div>
+                    <div class="offers-item">
+                        <h3>Only best discounts</h3>
+                        <p>Exclusive prices and exceptional discounts of up to 70%</p>
+                    </div>
+                    <div class="offers-item">
+                        <h3>Always in touch!</h3>
+                        <p>A reliable and responsive customer service</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <section id="gallery" class="gallery">
+        <div class="gallery-container container">
+            <h2>Gallery</h2>
+            <div class="gallery-items">
+                <div class="gallery-item">
+                    <img src="img/background/gallery-1.jpg" alt="photo">
+                    <p>streetview in winter</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="img/background/gallery-2.jpg" alt="photo">
+                    <p>church of st nicholas</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="img/background/gallery-3.jpg" alt="photo">
+                    <p>water tower</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="img/background/gallery-4.jpg" alt="photo">
+                    <p>estonian maritime academy</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="img/background/gallery-5.jpg" alt="photo">
+                    <p>bekker port</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="img/background/gallery-6.jpg" alt="photo">
+                    <p>paljassaare bay</p>
+                </div>
+            </div>
+        </div>
     </section>
-    <script src="js/script.js"></script>
+    <footer id="contact" class="footer">
+        <div class="footer-container container">
+            <div class="footer-logo">
+                <img src="img/icons/logo.svg" alt="logo">
+                <a href="#">koplitravel</a>
+            </div>
+            <div class="footer-form">
+                <input class="your-email" type="email" placeholder="Your Email"> 
+                <div class="form-send">
+                    <textarea class="your-message" placeholder="Your message"></textarea>
+                    <input class="btn" type="button" value="Send Email">
+                </div>
+
+            </div>
+            <nav class="footer-links">
+                <p>Copyright &#169; 2023. All rights reserved.</p>
+                <div>
+                    <p>Follow Us</p>
+                    <a href="#"><img src="img/icons/facebook.svg" alt="facebook"></a>
+                    <a href="#"><img src="img/icons/instagram.svg" alt="instagram"></a>
+                    <a href="#"><img src="img/icons/twitter.svg" alt="twitter"></a>
+                    <a href="#"><img src="img/icons/youtube.svg" alt="youtube"></a>
+                </div>
+            </nav>
+        </div>
+    </footer>
 </body>
 </html>
